@@ -40,10 +40,10 @@
 
     <div class="container my-3">
         <h2 class="my-5">Harry Potter Library</h2>
-        <form>
+        <form id="addForm">
             <div class="mb-3">
-                <label for="addBook" class="form-label">Name of the book: </label>
-                <input type="text" class="form-control" id="Book" placeholder="Enter the name of the book">
+                <label for="bookName" class="form-label">Name of the book: </label>
+                <input type="text" class="form-control" id="bookName" placeholder="Enter the name of the book">
             </div>
             <div class="mb-3">
                 <label for="author" class="form-label">Name of the book: </label>
@@ -51,8 +51,8 @@
             </div>
             <div class="mb-3">
                 <label for="genre" class="form-label">Genre: </label>
-                <input class="form-control" list="datalistOptions" id="genre" placeholder="Type to search a genre">
-                <datalist id="datalistOptions">
+                <input class="form-control" list="genreOptions" id="genre" placeholder="Type to search a genre">
+                <datalist id="genreOptions">
                     <option value="Horror">
                     <option value="SciFi">
                     <option value="Fiction">
@@ -68,14 +68,14 @@
         <!-- => Form to add a book to the library ends here. -->
 
         <div id="table" class="my-5">
-            <h2 class="my-5">Harry Potter Library</h2>
+            <h2 class="my-5">List of available books in the library</h2>
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">S.N.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Genre</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -85,23 +85,12 @@
                         <td>Otto</td>
                         <td>@mdo</td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
 
         <!-- => List of available books table ends here. -->
-        
+
     </div>
 
 
