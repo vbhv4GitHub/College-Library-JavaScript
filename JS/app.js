@@ -6,11 +6,31 @@ function book(name, author, genre) {
 
 }
 
-// -> Display prototype for object book
+// -> Display Constructor to display book list on the table.
 function display() {
 
 }
 
+// -> Adding methods to display prototype
+display.prototype.clear = function() {
+    let addForm = document.getElementById('addForm');
+    addForm.reset(); // Will clear the form after submission.
+}
+
+display.prototype.add = function(book1) {
+    // Populating the table rows on front end.
+    let tableBody = document.getElementById('tableBody');
+    bookListHTMLString = `
+    <tr>
+        <th scope="row">1</th>
+        <td>${book1.name}</td>
+        <td>${book1.genre}</td>
+        <td>${book1.author}</td>
+    </tr>`;
+
+    tableBody.innerHTML += bookListHTMLString;
+
+}
 
 // -> Submit event listner for the 'addForm'
 
@@ -27,4 +47,8 @@ function addBook(e) {
     // let genre = document.getElementById('genreOption').value;
     let book1 = new book(name, author, "Fiction");
     console.log(book1);
+
+    let display1 = new display();
+    display1.add(book1);
+    display1.clear();
 }
